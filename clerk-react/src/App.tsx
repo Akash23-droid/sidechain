@@ -7,6 +7,7 @@ import {
 } from "@clerk/clerk-react";
 import Dashboard from "./Component/Dashboard.jsx";
 import Login from "./Component/Login.jsx";
+import Dashboard2 from "./Component/Dashboard2.jsx";
 import {
   BrowserRouter as Router,
   Route,
@@ -26,6 +27,14 @@ function App() {
             element={
               <SignedIn>
                 <Dashboard />
+              </SignedIn>
+            }
+          />
+          <Route
+            path="/dashboard2"
+            element={
+              <SignedIn>
+                <Dashboard2 />
               </SignedIn>
             }
           />

@@ -8,7 +8,7 @@ const Dashboard = () => {
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [resume, setResume] = useState(null);
-    const [linkedin, setLinkedin] = useState('');
+    const [githubLink, setGithubLink] = useState('');
     const navigate = useNavigate();
     console.log("navigate : ", navigate);
 
@@ -22,7 +22,7 @@ const Dashboard = () => {
     const handleSubmit = (event) => {
         event.preventDefault();
         // Here you would typically send the data to your server
-        console.log({ name, email, resume, linkedin });
+        console.log({ name, email, resume, githubLink });
 
         // Redirect to the dashboard after form submission
         navigate('/dashboard2');
@@ -58,12 +58,12 @@ const Dashboard = () => {
                     <input type="file" accept=".pdf,.doc,.docx" onChange={handleFileChange} />
                 </div>
                 <div>
-                    <label>LinkedIn Profile:</label>
+                    <label>github Profile</label>
                     <input
                         // type="url"
                         type="text"
-                        value={linkedin}
-                        onChange={(e) => setLinkedin(e.target.value)}
+                        value={githubLink}
+                        onChange={(e) => setGithubLink(e.target.value)}
                         required
                     />
                 </div>
